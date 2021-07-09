@@ -1,0 +1,134 @@
+<html>
+<head>
+    
+    <link rel="stylesheet" href="play.css">
+     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src ="playjs.js"></script>
+     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+   <link rel="stylesheet"href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+<body>
+     <section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light ">
+  <a class="navbar-brand" href="#"><img src="img/logo.PNG"></a>
+         
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+ 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <i class="fa fa-border-all"></i>  Categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+          <a class="dropdown-item" href="coursC.html">Cours Certifié</a>
+          <a class="dropdown-item" href="coursNC.html">Cours Gratuits</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Streaming</a>
+             <a class="dropdown-item" href="#">Forum</a>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#footer">Contacter nous </a>
+      </li>
+      
+     
+         <li class="nav-item">
+        <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Connexion</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">s'inscrire</a>
+      </li>
+    </ul>
+   
+  </div>
+</nav>
+           </section> 
+    <figure id="video_player">
+        <video controls width="700px">
+        <source src="video/video2.mp4" type="video/mp4">
+        <source src="video/video2.mp4" type="video/webm">
+        </video>
+       
+        <figcaption>
+         <table class="content-table">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Name</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><a href="video/video1.mp4">Course Introduction</a></td>
+      
+    </tr>
+    <tr class="active-row">
+      <td>2</td>
+      <td><a href="video/video2.mp4">Module Introduction</a></td>
+     
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><a href="video/video3.mp4">Html-CSS</a></td>
+     
+    </tr>
+       <tr>
+      <td>4</td>
+      <td><a href="video/video4.mp4">JavaScript</a></td>
+     
+    </tr>
+       <tr>
+      <td>5</td>
+      <td><a href="video/video4.mp4">php</a></td>
+     
+    </tr>
+       <tr>
+      <td>6</td>
+      <td><a href="video/video4.mp4">SQL</a></td>
+     
+    </tr>
+  </tbody>
+</table>
+        </figcaption>
+    
+    </figure>   
+
+    </body>
+    </html>
+<script type="text/javascript">
+    var video_player=document.getElementById("video_player"),
+        links= video_player.getElementsByTagName('a);
+         for(var i=0; i<links.length;i++){
+            links[i].onclick=handler;
+        }
+    function handler(e){
+        e.preventDefault();
+        videotarget=this.getAttribute("href");
+        filename=videotarget.substr(0,videotarget.lastIndexOf('.'))||videotarget;
+        video=document.querySelector("#video_player video source");
+        source[0].src=filename + ".mp4";
+        source[1].src=filename + ".webm";
+        video.load();
+        video.play();
+        
+    }
+
+
+</script>
